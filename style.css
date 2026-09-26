@@ -1,14 +1,11 @@
 :root {
-  --background: #f7f7f7;
-  --card: #ffffff;
-
+  --background: #f7f7f5;
   --text: #2b2b2b;
-  --muted: #6d6d6d;
+  --muted: #6f7478;
+  --accent: #2f6f91;
+  --line: #ddddda;
 
-  --accent: #2f80c7;
-  --line: #dedede;
-
-  --page-width: 1180px;
+  --page-width: 1160px;
 }
 
 
@@ -56,47 +53,43 @@ a:hover {
 .page-layout {
   width: min(
     var(--page-width),
-    calc(100% - 40px)
+    calc(100% - 44px)
   );
 
-  margin: 34px auto 60px;
+  margin: 42px auto 64px;
 
   display: grid;
 
   grid-template-columns:
-    280px minmax(0, 1fr);
+    250px minmax(0, 1fr);
 
-  gap: 44px;
+  gap: 48px;
 
   align-items: start;
 }
 
 
-/* PROFILE CARD */
+/* LEFT SIDEBAR */
 
 .profile-card {
   position: sticky;
-  top: 28px;
+  top: 34px;
 
-  background: var(--card);
+  background: transparent;
 
-  border-radius: 10px;
+  padding-right: 32px;
 
-  box-shadow:
-    0 2px 10px
-    rgba(0, 0, 0, 0.09);
-
-  overflow: hidden;
+  border-right: 1px solid var(--line);
 }
 
 .profile-content {
-  padding: 38px 30px 32px;
+  padding: 0;
 
-  text-align: center;
+  text-align: left;
 }
 
 .profile-card h1 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 
   font-family:
     Georgia,
@@ -104,17 +97,19 @@ a:hover {
     "Noto Serif SC",
     serif;
 
-  font-size: 1.65rem;
+  font-size: 1.95rem;
 
-  font-weight: 600;
+  font-weight: 500;
+
+  line-height: 1.2;
 }
 
 .position {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
+
+  font-size: 0.95rem;
 
   color: var(--text);
-
-  font-size: 0.94rem;
 }
 
 .affiliation {
@@ -122,29 +117,30 @@ a:hover {
 
   color: var(--muted);
 
-  font-size: 0.89rem;
+  font-size: 0.88rem;
 
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .divider {
-  width: 55px;
+  width: 100%;
+
   height: 1px;
 
-  margin: 24px auto;
+  margin: 22px 0;
 
   background: var(--line);
 }
 
 
-/* RESEARCH INTERESTS IN CARD */
+/* RESEARCH INTERESTS */
 
 .interests {
   display: flex;
 
   flex-direction: column;
 
-  gap: 5px;
+  gap: 4px;
 
   color: var(--muted);
 
@@ -157,23 +153,23 @@ a:hover {
 .profile-links {
   display: flex;
 
-  justify-content: center;
+  flex-direction: column;
 
-  flex-wrap: wrap;
+  align-items: flex-start;
 
-  gap: 7px 14px;
+  gap: 7px;
 }
 
 .profile-links a {
-  font-size: 0.86rem;
+  color: var(--accent);
 
-  color: var(--text);
+  font-size: 0.87rem;
+
+  text-decoration: none;
 }
 
 .profile-links a:hover {
-  color: var(--accent);
-
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 
@@ -181,19 +177,17 @@ a:hover {
 
 .content {
   min-width: 0;
-
-  background: transparent;
 }
 
 
 /* SECTIONS */
 
 section {
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 section h2 {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 
   padding-bottom: 9px;
 
@@ -205,7 +199,7 @@ section h2 {
     "Noto Serif SC",
     serif;
 
-  font-size: 2rem;
+  font-size: 1.95rem;
 
   font-weight: 400;
 
@@ -217,7 +211,11 @@ section p {
 }
 
 #about {
-  padding-top: 3px;
+  padding-top: 2px;
+}
+
+#about p {
+  max-width: 780px;
 }
 
 
@@ -226,7 +224,7 @@ section p {
 .news-list {
   margin: 0;
 
-  padding-left: 24px;
+  padding-left: 22px;
 }
 
 .news-list li {
@@ -238,7 +236,7 @@ section p {
 .date {
   display: inline-block;
 
-  min-width: 75px;
+  min-width: 78px;
 
   color: var(--muted);
 
@@ -252,11 +250,11 @@ section p {
   display: grid;
 
   grid-template-columns:
-    95px 1fr;
+    100px 1fr;
 
-  gap: 22px;
+  gap: 24px;
 
-  padding: 17px 0;
+  padding: 18px 0;
 
   border-bottom:
     1px solid rgba(0, 0, 0, 0.06);
@@ -312,7 +310,7 @@ section p {
 }
 
 .research-item h3 {
-  margin: 0 0 6px;
+  margin: 0 0 7px;
 
   font-family:
     Georgia,
@@ -329,6 +327,8 @@ section p {
   margin: 0;
 
   color: var(--muted);
+
+  max-width: 760px;
 }
 
 
@@ -356,17 +356,21 @@ footer {
 
 /* TABLET */
 
-@media (max-width: 850px) {
+@media (max-width: 860px) {
 
   .page-layout {
     grid-template-columns:
-      230px minmax(0, 1fr);
+      220px minmax(0, 1fr);
 
-    gap: 30px;
+    gap: 32px;
   }
 
-  .profile-content {
-    padding: 30px 22px;
+  .profile-card {
+    padding-right: 24px;
+  }
+
+  .profile-card h1 {
+    font-size: 1.7rem;
   }
 
 }
@@ -379,23 +383,35 @@ footer {
   .page-layout {
     width: calc(100% - 28px);
 
-    margin-top: 20px;
+    margin-top: 24px;
 
     grid-template-columns: 1fr;
 
-    gap: 30px;
+    gap: 32px;
   }
 
   .profile-card {
     position: static;
+
+    padding-right: 0;
+
+    padding-bottom: 28px;
+
+    border-right: none;
+
+    border-bottom: 1px solid var(--line);
   }
 
-  .profile-content {
-    padding: 30px 24px;
+  .profile-links {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: 10px 18px;
   }
 
   section {
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
 
   section h2 {
@@ -405,7 +421,7 @@ footer {
   .publication {
     grid-template-columns: 1fr;
 
-    gap: 4px;
+    gap: 5px;
   }
 
   .pub-year {
