@@ -4,76 +4,364 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Yuchen Sun</title>
+  <title>Yuchen Sun | Mathematics</title>
+  <meta name="description"
+        content="Academic website of Yuchen Sun, PhD student in Mathematics.">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="container">
+<header class="topbar">
+  <div class="nav-container">
 
-    <header>
-      <h1>Yuchen Sun</h1>
+    <a href="#" class="name-logo">
+      Yuchen Sun
+    </a>
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <nav>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#research" data-i18n="nav_research">Research</a>
+      <a href="#publications" data-i18n="nav_publications">Publications</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
 
-    <main>
+    <div class="controls">
 
-      <section id="about">
-        <h2>About</h2>
+      <div class="languages">
+        <button class="language active" data-lang="en">EN</button>
+        <button class="language" data-lang="de">DE</button>
+        <button class="language" data-lang="zh">中文</button>
+      </div>
 
-        <p>
-          I am a PhD student in Mathematics.
-          My research interests include stochastic analysis,
-          rough paths, stochastic differential equations,
-          and stochastic partial differential equations.
-        </p>
-      </section>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        ◐
+      </button>
 
-
-      <section id="research">
-        <h2>Research</h2>
-
-        <p>
-          My current research focuses on ...
-        </p>
-      </section>
-
-
-      <section id="publications">
-        <h2>Publications</h2>
-
-        <p>
-          Publications and preprints will appear here.
-        </p>
-      </section>
-
-
-      <section id="contact">
-        <h2>Contact</h2>
-
-        <p>
-          Email:
-          <a href="mailto:your.email@example.com">
-            your.email@example.com
-          </a>
-        </p>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>© Yuchen Sun</p>
-    </footer>
+    </div>
 
   </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero page-width">
+
+    <div class="hero-main">
+
+      <p class="eyebrow" data-i18n="position">
+        PhD Student in Mathematics
+      </p>
+
+      <h1>
+        Yuchen<br>
+        <span>Sun</span>
+      </h1>
+
+      <p class="intro" data-i18n="intro">
+        I work in stochastic analysis, with particular interests in
+        rough paths, backward stochastic differential equations,
+        singular PDEs and stochastic PDEs.
+      </p>
+
+      <div class="hero-links">
+
+        <a href="mailto:YOUR_EMAIL">
+          <span data-i18n="email">Email</span>
+          <span>↗</span>
+        </a>
+
+        <a href="#">
+          <span>CV</span>
+          <span>↗</span>
+        </a>
+
+        <a href="#">
+          <span>Google Scholar</span>
+          <span>↗</span>
+        </a>
+
+        <a href="https://github.com/yuuuuchen">
+          <span>GitHub</span>
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <aside class="hero-side">
+
+      <div class="side-label">
+        <span data-i18n="based">Based in</span>
+        <strong>Berlin</strong>
+      </div>
+
+      <div class="institution">
+        <span>HU Berlin</span>
+        <small data-i18n="hu">
+          Humboldt-Universität zu Berlin
+        </small>
+      </div>
+
+      <div class="institution">
+        <span>TU Berlin</span>
+        <small data-i18n="tu">
+          Technische Universität Berlin
+        </small>
+      </div>
+
+      <div class="coordinates">
+        <span>Stochastic Analysis</span>
+        <span>Rough Paths</span>
+        <span>BSDEs</span>
+        <span>Singular PDEs</span>
+      </div>
+
+    </aside>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about" class="section page-width">
+
+    <div class="section-number">
+      01
+    </div>
+
+    <div class="section-content">
+
+      <h2 data-i18n="about_title">
+        About
+      </h2>
+
+      <div class="about-grid">
+
+        <p class="large-text" data-i18n="about_main">
+          I am a PhD student in mathematics in Berlin. My research lies
+          at the intersection of stochastic analysis, rough path theory,
+          stochastic differential equations and partial differential
+          equations.
+        </p>
+
+        <p data-i18n="about_secondary">
+          I am particularly interested in pathwise approaches to
+          stochastic systems, equations with discontinuous or singular
+          inputs, and probabilistic representations of nonlinear PDEs.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESEARCH -->
+
+  <section id="research" class="section page-width">
+
+    <div class="section-number">
+      02
+    </div>
+
+    <div class="section-content">
+
+      <h2 data-i18n="research_title">
+        Research
+      </h2>
+
+      <div class="research-grid">
+
+        <article class="research-item">
+
+          <span class="research-index">A</span>
+
+          <h3 data-i18n="research_rough_title">
+            Rough & Pathwise Analysis
+          </h3>
+
+          <p data-i18n="research_rough_text">
+            Rough differential equations, discontinuous drivers,
+            decorated path spaces and stability under rough convergence.
+          </p>
+
+        </article>
+
+
+        <article class="research-item">
+
+          <span class="research-index">B</span>
+
+          <h3 data-i18n="research_bsde_title">
+            BSDEs & Nonlinear PDEs
+          </h3>
+
+          <p data-i18n="research_bsde_text">
+            Backward stochastic differential equations and their
+            connections with semilinear and singular PDEs.
+          </p>
+
+        </article>
+
+
+        <article class="research-item">
+
+          <span class="research-index">C</span>
+
+          <h3 data-i18n="research_spde_title">
+            Singular SPDEs
+          </h3>
+
+          <p data-i18n="research_spde_text">
+            KPZ-type equations, paracontrolled methods and
+            probabilistic representations.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PUBLICATIONS -->
+
+  <section id="publications" class="section page-width">
+
+    <div class="section-number">
+      03
+    </div>
+
+    <div class="section-content">
+
+      <h2 data-i18n="publications_title">
+        Selected Publications
+      </h2>
+
+
+      <article class="publication">
+
+        <div class="publication-year">
+          2025
+        </div>
+
+        <div class="publication-main">
+
+          <h3>
+            Rough backward SDEs with discontinuous Young drivers
+          </h3>
+
+          <p class="authors">
+            Yuchen Sun · Dirk Becherer
+          </p>
+
+          <div class="publication-links">
+            <a href="https://arxiv.org/abs/2505.20437">
+              arXiv ↗
+            </a>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="publication">
+
+        <div class="publication-year"
+             data-i18n="in_progress">
+          In progress
+        </div>
+
+        <div class="publication-main">
+
+          <h3>
+            Semilinear rough PDEs with discontinuous Young drivers
+          </h3>
+
+          <p class="authors"
+             data-i18n="rpde_authors">
+            with Dirk Becherer and Peter Friz
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="section page-width">
+
+    <div class="section-number">
+      04
+    </div>
+
+    <div class="section-content">
+
+      <div class="contact-box">
+
+        <div>
+          <p class="contact-small"
+             data-i18n="contact_title">
+            Contact
+          </p>
+
+          <h2 data-i18n="contact_heading">
+            Let's talk mathematics.
+          </h2>
+        </div>
+
+        <div class="contact-right">
+
+          <p data-i18n="contact_text">
+            Feel free to contact me about research,
+            seminars, talks or collaboration.
+          </p>
+
+          <a href="mailto:YOUR_EMAIL">
+            YOUR_EMAIL ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="page-width">
+
+  <span>
+    © 2026 Yuchen Sun
+  </span>
+
+  <span data-i18n="footer">
+    Mathematics · Berlin
+  </span>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
