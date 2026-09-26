@@ -5,66 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Yuchen Sun</title>
-  <meta
-    name="description"
-    content="Personal academic website of Yuchen Sun."
-  >
+  <meta name="description" content="Academic website of Yuchen Sun">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="page">
+  <div class="page-layout">
 
-    <header>
+    <!-- LEFT PROFILE CARD -->
 
-      <div class="top-row">
-        <a class="name" href="#">Yuchen Sun</a>
+    <aside class="profile-card">
 
-        <nav>
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
+      <div class="profile-content">
 
-    </header>
-
-
-    <main>
-
-      <!-- INTRO -->
-
-      <section class="intro">
+        <h1>Yuchen Sun</h1>
 
         <p class="position">
           PhD Student in Mathematics
         </p>
 
-        <h1>Yuchen Sun</h1>
-
         <p class="affiliation">
-          Humboldt-Universität zu Berlin · Technische Universität Berlin
+          Humboldt-Universität zu Berlin<br>
+          Technische Universität Berlin
         </p>
 
-        <p class="description">
-          I work in stochastic analysis, with particular interests in
-          rough paths, backward stochastic differential equations,
-          singular PDEs and stochastic PDEs.
-        </p>
+        <div class="divider"></div>
 
-        <div class="links">
+        <div class="interests">
+          <span>Stochastic Analysis</span>
+          <span>Rough Paths</span>
+          <span>BSDEs</span>
+          <span>Singular PDEs</span>
+          <span>SPDEs</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <nav class="profile-links">
           <a href="mailto:YOUR_EMAIL">Email</a>
           <a href="#">CV</a>
           <a href="#">Google Scholar</a>
           <a href="https://github.com/yuuuuchen">GitHub</a>
-          <a href="https://arxiv.org/abs/2505.20437">arXiv</a>
-        </div>
+        </nav>
 
-      </section>
+      </div>
 
+    </aside>
+
+
+    <!-- RIGHT CONTENT -->
+
+    <main class="content">
 
       <!-- ABOUT -->
 
@@ -73,54 +66,45 @@
         <h2>About</h2>
 
         <p>
-          I am a PhD student in mathematics in Berlin.
+          I am a PhD student in Mathematics in Berlin.
           My research lies at the intersection of stochastic analysis,
-          rough path theory, stochastic differential equations,
-          and partial differential equations.
+          rough path theory, stochastic differential equations and
+          partial differential equations.
         </p>
 
         <p>
           I am particularly interested in pathwise approaches to
-          stochastic systems, equations with discontinuous or singular
-          inputs, and probabilistic representations of nonlinear PDEs.
+          stochastic systems, backward stochastic differential equations,
+          singular PDEs and SPDEs, and probabilistic representations
+          of nonlinear equations.
         </p>
 
       </section>
 
 
-      <!-- RESEARCH -->
+      <!-- NEWS -->
 
-      <section id="research">
+      <section id="news">
 
-        <h2>Research</h2>
+        <h2>News</h2>
 
-        <div class="research-list">
+        <ul class="news-list">
 
-          <div>
-            <h3>Rough Paths</h3>
-            <p>
-              Rough differential equations, discontinuous drivers,
-              decorated paths, and stability.
-            </p>
-          </div>
+          <li>
+            <span class="date">2026.09</span>
+            <span>
+              Personal academic website launched.
+            </span>
+          </li>
 
-          <div>
-            <h3>BSDEs & PDEs</h3>
-            <p>
-              Backward stochastic differential equations and their
-              connections with nonlinear and singular PDEs.
-            </p>
-          </div>
+          <li>
+            <span class="date">2026</span>
+            <span>
+              Working on singular FBSDEs and KPZ-type equations.
+            </span>
+          </li>
 
-          <div>
-            <h3>Singular SPDEs</h3>
-            <p>
-              KPZ-type equations, paracontrolled methods,
-              and probabilistic representations.
-            </p>
-          </div>
-
-        </div>
+        </ul>
 
       </section>
 
@@ -129,15 +113,16 @@
 
       <section id="publications">
 
-        <h2>Selected Publications</h2>
+        <h2>Publications</h2>
 
-        <article class="publication">
+        <div class="publication">
 
-          <div class="year">
+          <div class="pub-year">
             2025
           </div>
 
-          <div>
+          <div class="pub-body">
+
             <h3>
               Rough backward SDEs with discontinuous Young drivers
             </h3>
@@ -151,18 +136,20 @@
                 arXiv
               </a>
             </p>
+
           </div>
 
-        </article>
+        </div>
 
 
-        <article class="publication">
+        <div class="publication">
 
-          <div class="year">
+          <div class="pub-year">
             In progress
           </div>
 
-          <div>
+          <div class="pub-body">
+
             <h3>
               Semilinear rough PDEs with discontinuous Young drivers
             </h3>
@@ -170,9 +157,55 @@
             <p class="authors">
               with Dirk Becherer and Peter Friz
             </p>
+
           </div>
 
-        </article>
+        </div>
+
+      </section>
+
+
+      <!-- RESEARCH -->
+
+      <section id="research">
+
+        <h2>Research</h2>
+
+        <div class="research-item">
+
+          <h3>Rough Paths and Discontinuous Drivers</h3>
+
+          <p>
+            Rough and Young differential equations with discontinuous
+            driving signals, decorated path spaces, and stability
+            under Skorokhod-type convergence.
+          </p>
+
+        </div>
+
+
+        <div class="research-item">
+
+          <h3>Backward Stochastic Differential Equations</h3>
+
+          <p>
+            BSDEs with rough or singular inputs and their connections
+            to nonlinear partial differential equations.
+          </p>
+
+        </div>
+
+
+        <div class="research-item">
+
+          <h3>Singular PDEs and SPDEs</h3>
+
+          <p>
+            Singular Hamilton–Jacobi equations, KPZ-type equations,
+            paracontrolled analysis and probabilistic representations.
+          </p>
+
+        </div>
 
       </section>
 
@@ -184,11 +217,7 @@
         <h2>Contact</h2>
 
         <p>
-          Feel free to contact me regarding research,
-          seminars, talks, or collaboration.
-        </p>
-
-        <p>
+          Email:
           <a href="mailto:YOUR_EMAIL">
             YOUR_EMAIL
           </a>
@@ -196,12 +225,12 @@
 
       </section>
 
+
+      <footer>
+        © 2026 Yuchen Sun
+      </footer>
+
     </main>
-
-
-    <footer>
-      © 2026 Yuchen Sun
-    </footer>
 
   </div>
 
