@@ -185,16 +185,13 @@ a:hover {
 
 .content-nav {
   display: flex;
-
-  justify-content: flex-end;
-
   flex-wrap: wrap;
 
-  gap: 24px;
+  gap: 14px 34px;
 
-  padding: 2px 0 19px;
+  padding: 6px 0 22px;
 
-  margin-bottom: 36px;
+  margin-bottom: 42px;
 
   border-bottom: 1px solid var(--line);
 }
@@ -204,15 +201,15 @@ a:hover {
 
   text-decoration: none;
 
-  font-size: 0.88rem;
+  font-size: 0.9rem;
+
+  line-height: 1.4;
 
   transition: color 0.15s ease;
 }
 
 .content-nav a:hover {
   color: var(--text);
-
-  text-decoration: none;
 }
 
 
