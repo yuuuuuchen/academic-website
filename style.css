@@ -9,7 +9,9 @@
 }
 
 
-/* BASIC */
+/* =========================================================
+   GLOBAL
+   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -48,7 +50,9 @@ a:hover {
 }
 
 
-/* PAGE LAYOUT */
+/* =========================================================
+   PAGE LAYOUT
+   ========================================================= */
 
 .page-layout {
   width: min(
@@ -69,7 +73,9 @@ a:hover {
 }
 
 
-/* LEFT PROFILE COLUMN */
+/* =========================================================
+   LEFT PROFILE COLUMN
+   ========================================================= */
 
 .profile-card {
   position: sticky;
@@ -125,7 +131,6 @@ a:hover {
 
 .divider {
   width: 100%;
-
   height: 1px;
 
   margin: 22px 0;
@@ -134,7 +139,9 @@ a:hover {
 }
 
 
-/* RESEARCH INTERESTS */
+/* =========================================================
+   RESEARCH INTERESTS IN PROFILE
+   ========================================================= */
 
 .interests {
   display: flex;
@@ -149,7 +156,9 @@ a:hover {
 }
 
 
-/* PROFILE LINKS */
+/* =========================================================
+   PROFILE LINKS
+   ========================================================= */
 
 .profile-links {
   display: flex;
@@ -174,17 +183,22 @@ a:hover {
 }
 
 
-/* RIGHT CONTENT */
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
 
 .content {
   min-width: 0;
 }
 
 
-/* NAVIGATION INSIDE RIGHT COLUMN */
+/* =========================================================
+   RIGHT-SIDE NAVIGATION
+   ========================================================= */
 
 .content-nav {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 14px 34px;
@@ -210,10 +224,14 @@ a:hover {
 
 .content-nav a:hover {
   color: var(--text);
+
+  text-decoration: none;
 }
 
 
-/* SECTIONS */
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
 
 section {
   margin-bottom: 50px;
@@ -253,7 +271,9 @@ section p {
 }
 
 
-/* PUBLICATIONS */
+/* =========================================================
+   PUBLICATIONS
+   ========================================================= */
 
 .publication {
   display: grid;
@@ -265,7 +285,8 @@ section p {
 
   padding: 18px 0;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.06);
 }
 
 .publication:first-of-type {
@@ -312,7 +333,9 @@ section p {
 }
 
 
-/* TALKS */
+/* =========================================================
+   TALKS
+   ========================================================= */
 
 .talk {
   display: grid;
@@ -324,7 +347,8 @@ section p {
 
   padding: 16px 0;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.06);
 }
 
 .talk:first-of-type {
@@ -365,36 +389,9 @@ section p {
 }
 
 
-/* RESEARCH */
-
-.research-item {
-  margin-bottom: 28px;
-}
-
-.research-item h3 {
-  margin: 0 0 7px;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    "Noto Serif SC",
-    "Songti SC",
-    serif;
-
-  font-size: 1.16rem;
-
-  font-weight: 600;
-}
-
-.research-item p {
-  margin: 0;
-
-  color: var(--muted);
-
-  max-width: 760px;
-}
-
-/* TEACHING */
+/* =========================================================
+   TEACHING
+   ========================================================= */
 
 .teaching-item {
   display: grid;
@@ -408,7 +405,8 @@ section p {
 
   padding: 9px 0;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.06);
 }
 
 .teaching-item:first-of-type {
@@ -447,14 +445,20 @@ section p {
 
   white-space: nowrap;
 }
-/* CONTACT */
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 #contact p {
   margin-bottom: 0;
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
   margin-top: 60px;
@@ -469,7 +473,9 @@ footer {
 }
 
 
-/* TABLET */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 860px) {
 
@@ -489,15 +495,38 @@ footer {
   }
 
   .content-nav {
+    gap: 12px 24px;
+  }
+
+  .publication,
+  .talk {
+    grid-template-columns:
+      85px 1fr;
+
     gap: 18px;
+  }
+
+  .teaching-item {
+    grid-template-columns:
+      100px 1fr 75px;
+
+    gap: 14px;
+  }
+
+  .teaching-course {
+    font-size: 0.98rem;
   }
 
 }
 
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 680px) {
+
+  /* PAGE */
 
   .page-layout {
     width: calc(100% - 28px);
@@ -510,20 +539,21 @@ footer {
   }
 
 
-  /* profile moves above content */
+  /* PROFILE */
 
   .profile-card {
     position: static;
 
     padding-right: 0;
-
     padding-bottom: 28px;
 
     border-right: none;
-
     border-bottom: 1px solid var(--line);
   }
 
+  .profile-card h1 {
+    font-size: 1.85rem;
+  }
 
   .profile-links {
     flex-direction: row;
@@ -534,7 +564,7 @@ footer {
   }
 
 
-  /* navigation */
+  /* NAVIGATION */
 
   .content-nav {
     justify-content: flex-start;
@@ -551,7 +581,7 @@ footer {
   }
 
 
-  /* sections */
+  /* SECTIONS */
 
   section {
     margin-bottom: 40px;
@@ -562,7 +592,7 @@ footer {
   }
 
 
-  /* publications */
+  /* PUBLICATIONS */
 
   .publication {
     grid-template-columns: 1fr;
@@ -574,39 +604,8 @@ footer {
     margin-bottom: 2px;
   }
 
-  /* TEACHING — MOBILE */
 
-.teaching-item {
-  grid-template-columns: 88px 1fr;
-  gap: 3px 12px;
-
-  padding: 11px 0;
-}
-
-.teaching-term {
-  grid-column: 1;
-  grid-row: 1;
-
-  font-size: 0.82rem;
-}
-
-.teaching-course {
-  grid-column: 2;
-  grid-row: 1;
-
-  font-size: 0.98rem;
-}
-
-.teaching-place {
-  grid-column: 2;
-  grid-row: 2;
-
-  text-align: left;
-
-  font-size: 0.82rem;
-}
-
-  /* talks */
+  /* TALKS */
 
   .talk {
     grid-template-columns: 1fr;
@@ -616,6 +615,41 @@ footer {
 
   .talk-date {
     margin-bottom: 2px;
+  }
+
+
+  /* TEACHING */
+
+  .teaching-item {
+    grid-template-columns:
+      88px 1fr;
+
+    gap: 3px 12px;
+
+    padding: 11px 0;
+  }
+
+  .teaching-term {
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: 0.82rem;
+  }
+
+  .teaching-course {
+    grid-column: 2;
+    grid-row: 1;
+
+    font-size: 0.98rem;
+  }
+
+  .teaching-place {
+    grid-column: 2;
+    grid-row: 2;
+
+    text-align: left;
+
+    font-size: 0.82rem;
   }
 
 }
