@@ -400,11 +400,13 @@ section p {
   display: grid;
 
   grid-template-columns:
-    100px 1fr;
+    110px 1fr 90px;
 
-  gap: 24px;
+  gap: 18px;
 
-  padding: 16px 0;
+  align-items: center;
+
+  padding: 9px 0;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -418,12 +420,10 @@ section p {
 
   font-size: 0.87rem;
 
-  padding-top: 2px;
+  white-space: nowrap;
 }
 
-.teaching-body h3 {
-  margin: 0 0 4px;
-
+.teaching-course {
   font-family:
     Georgia,
     "Times New Roman",
@@ -431,21 +431,22 @@ section p {
     "Songti SC",
     serif;
 
-  font-size: 1.08rem;
+  font-size: 1.03rem;
 
   font-weight: 600;
 
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .teaching-place {
-  margin: 0;
-
   color: var(--muted);
 
-  font-size: 0.92rem;
-}
+  font-size: 0.87rem;
 
+  text-align: right;
+
+  white-space: nowrap;
+}
 /* CONTACT */
 
 #contact p {
