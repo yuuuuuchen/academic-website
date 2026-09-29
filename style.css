@@ -277,16 +277,10 @@ section p {
 
 .publication {
   display: grid;
-
-  grid-template-columns:
-    100px 1fr;
-
+  grid-template-columns: 100px 1fr;
   gap: 24px;
-
   padding: 18px 0;
-
-  border-bottom:
-    1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .publication:first-of-type {
@@ -295,9 +289,7 @@ section p {
 
 .pub-year {
   color: var(--muted);
-
   font-size: 0.87rem;
-
   padding-top: 2px;
 }
 
@@ -312,26 +304,24 @@ section p {
     serif;
 
   font-size: 1.08rem;
-
   font-weight: 600;
-
   line-height: 1.5;
 }
 
-.authors {
-  margin: 0 0 4px;
-
+.pub-meta {
+  margin: 5px 0 0;
   color: var(--muted);
-
   font-size: 0.92rem;
 }
 
-.pub-links {
-  margin: 0;
-
-  font-size: 0.9rem;
+.pub-meta a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
+.pub-meta a:hover {
+  text-decoration: underline;
+}
 
 /* =========================================================
    TALKS
