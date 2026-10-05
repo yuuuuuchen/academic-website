@@ -65,7 +65,7 @@ a:hover {
   display: grid;
 
   grid-template-columns:
-    250px minmax(0, 1fr);
+    280px minmax(0, 1fr);
 
   gap: 48px;
 
@@ -74,14 +74,12 @@ a:hover {
 
 
 /* =========================================================
-   LEFT PROFILE COLUMN
+   LEFT PROFILE
    ========================================================= */
 
 .profile-card {
   position: sticky;
   top: 34px;
-
-  background: transparent;
 
   padding-right: 32px;
 
@@ -114,9 +112,9 @@ a:hover {
 .position {
   margin: 0 0 12px;
 
-  font-size: 0.95rem;
-
   color: var(--text);
+
+  font-size: 0.95rem;
 }
 
 .affiliation {
@@ -136,30 +134,6 @@ a:hover {
   margin: 22px 0;
 
   background: var(--line);
-}
-
-
-.address {
-  display: flex;
-  flex-direction: column;
-
-  gap: 3px;
-
-  color: var(--muted);
-
-  font-size: 0.88rem;
-
-  line-height: 1.55;
-}
-
-.address strong {
-  color: var(--text);
-
-  font-weight: 600;
-}
-
-.address-gap {
-  height: 10px;
 }
 
 
@@ -191,6 +165,35 @@ a:hover {
 
 
 /* =========================================================
+   ADDRESSES
+   ========================================================= */
+
+.address {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  color: var(--muted);
+
+  font-size: 0.88rem;
+
+  line-height: 1.55;
+}
+
+.address strong {
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+.address-gap {
+  height: 10px;
+}
+
+
+/* =========================================================
    RIGHT CONTENT
    ========================================================= */
 
@@ -200,7 +203,7 @@ a:hover {
 
 
 /* =========================================================
-   RIGHT-SIDE NAVIGATION
+   NAVIGATION
    ========================================================= */
 
 .content-nav {
@@ -233,6 +236,25 @@ a:hover {
   color: var(--text);
 
   text-decoration: none;
+}
+
+.content-nav a.active {
+  color: var(--text);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   TAB SECTIONS
+   ========================================================= */
+
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
 }
 
 
@@ -269,10 +291,6 @@ section p {
   margin: 0 0 16px;
 }
 
-#about {
-  padding-top: 1px;
-}
-
 #about p {
   max-width: 780px;
 }
@@ -284,10 +302,16 @@ section p {
 
 .publication {
   display: grid;
-  grid-template-columns: 100px 1fr;
+
+  grid-template-columns:
+    100px 1fr;
+
   gap: 24px;
+
   padding: 18px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.06);
 }
 
 .publication:first-of-type {
@@ -296,7 +320,9 @@ section p {
 
 .pub-year {
   color: var(--muted);
+
   font-size: 0.87rem;
+
   padding-top: 2px;
 }
 
@@ -311,24 +337,30 @@ section p {
     serif;
 
   font-size: 1.08rem;
+
   font-weight: 600;
+
   line-height: 1.5;
 }
 
 .pub-meta {
   margin: 5px 0 0;
+
   color: var(--muted);
+
   font-size: 0.92rem;
 }
 
 .pub-meta a {
   color: var(--accent);
+
   text-decoration: none;
 }
 
 .pub-meta a:hover {
   text-decoration: underline;
 }
+
 
 /* =========================================================
    TALKS
@@ -443,6 +475,7 @@ section p {
   white-space: nowrap;
 }
 
+
 /* =========================================================
    SHORT CV
    ========================================================= */
@@ -462,6 +495,7 @@ section p {
     serif;
 
   font-size: 1.15rem;
+
   font-weight: 600;
 }
 
@@ -475,7 +509,8 @@ section p {
 
   padding: 14px 0;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom:
+    1px solid rgba(0, 0, 0, 0.06);
 }
 
 .cv-date {
@@ -501,13 +536,6 @@ section p {
   color: var(--muted);
 
   font-size: 0.92rem;
-}
-/* =========================================================
-   CONTACT
-   ========================================================= */
-
-#contact p {
-  margin-bottom: 0;
 }
 
 
@@ -572,30 +600,28 @@ footer {
     font-size: 0.98rem;
   }
 
-  /* SHORT CV — TABLET */
+  .cv-group {
+    margin-bottom: 30px;
+  }
 
-.cv-group {
-  margin-bottom: 30px;
-}
+  .cv-item {
+    grid-template-columns:
+      90px 1fr;
 
-.cv-item {
-  grid-template-columns:
-    90px 1fr;
+    gap: 16px;
+  }
 
-  gap: 16px;
-}
+  .cv-date {
+    font-size: 0.84rem;
+  }
 
-.cv-date {
-  font-size: 0.84rem;
-}
+  .cv-body strong {
+    font-size: 1rem;
+  }
 
-.cv-body strong {
-  font-size: 1rem;
-}
-
-.cv-body p {
-  font-size: 0.9rem;
-}
+  .cv-body p {
+    font-size: 0.9rem;
+  }
 
 }
 
@@ -697,10 +723,6 @@ footer {
     margin-bottom: 2px;
   }
 
-  .cv-item {
-  grid-template-columns: 1fr;
-  gap: 4px;
-}
 
   /* TEACHING */
 
@@ -734,6 +756,15 @@ footer {
     text-align: left;
 
     font-size: 0.82rem;
+  }
+
+
+  /* CV */
+
+  .cv-item {
+    grid-template-columns: 1fr;
+
+    gap: 4px;
   }
 
 }
